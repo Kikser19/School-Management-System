@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DamilahExercise.Models.Entities.Student>
+
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<link href="~/css/listStudents.css" rel="stylesheet" />
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="students-container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subjects</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>
+                        <ul>
+                            @foreach (var subject in student.Subjects)
+                            {
+                                <li>@subject.Name</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DamilahExercise.Models.Entities.Subject>
+
+<link rel="stylesheet" href="~/css/listSubjects.css" />
+
+<div class="subjects-container">
+    <h2>Subjects</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Weekly Classes</th>
+                <th>Teacher</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var subject in Model)
+            {
+                <tr>
+                    <td>@subject.Name</td>
+                    <td>@subject.Description</td>
+                    <td>@subject.NumberOfWeeklyClasses</td>
+                    <td>@(subject.Teacher != null ? subject.Teacher.Name : "No Teacher Assigned")</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@subject.Id">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

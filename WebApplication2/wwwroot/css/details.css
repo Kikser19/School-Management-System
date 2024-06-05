@@ -1,0 +1,73 @@
+﻿body, h1, h2, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.subjects-container {
+    margin: 50px auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+dl {
+    margin-bottom: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 20px;
+}
+
+.literature-list {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+    .literature-list li {
+        margin-bottom: 10px;
+        border-left: 3px solid #007bff;
+        padding-left: 10px;
+    }
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+    }
+
+.btn-create {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-create:hover {
+        background-color: #0056b3;
+    }

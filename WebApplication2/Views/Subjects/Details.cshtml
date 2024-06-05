@@ -1,0 +1,37 @@
+﻿@model DamilahExercise.Models.ViewModels.SubjectDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link href="~/css/details.css" rel="stylesheet" />
+
+<h2>Subject Details</h2>
+
+<div class="subjects-container">
+    <div>
+        <h2>Subject Name: @Model.Subject.Name</h2>
+        <hr />
+        <dl class="row">
+            <dt>Description</dt>
+            <dd>@Model.Subject.Description</dd>
+            <dt>Weekly Classes</dt>
+            <dd>@Model.Subject.NumberOfWeeklyClasses</dd>
+            <dt>Teacher</dt>
+            <dd>@Model.Subject.Teacher.Name</dd>
+        </dl>
+    </div>
+
+    <h3>Literatures</h3>
+    <ul class="literature-list">
+        @foreach (var literature in @Model.Literatures)
+        {
+            <li>
+                <strong>@literature.Title</strong> by @literature.Author
+            </li>
+        }
+    </ul>
+
+    <div>
+        <a asp-action="ListSubjects" class="btn-create">Back to List</a>
+    </div>
+</div>
